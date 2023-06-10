@@ -1,0 +1,29 @@
+1. Créez un dossier "dashboard".
+
+2. Initalisez un dépôt git.
+
+3. Créez un index.html avec un doctype et un h1 de votre choix.
+
+4. Créez un commit pour sauvegarder ces changements.
+
+5. Créez une branche "api".
+
+6. Allez sur la branch api.
+
+7. Créez un fichier app.js dans cette branche.
+
+8. Écrivez une fonction :
+
+function foo(name){
+  console.log("Bienvenue", name)
+}
+
+9. Faites un commit de ces changements.
+
+10. Fusionner la branche master avec la branche api. 
+
+11. Faites en sorte de créer une fusion provoquant un conflit, puis résolvez-le (je change le h1).
+
+12. supprimez la branche api.
+
+13. Renommez la branch master en main.

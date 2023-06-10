@@ -1,0 +1,21 @@
+1. Créez un dossier "Agence Web".
+
+2. Créez un index.html avec du contenu.
+
+3. Initialisez le dépôt local et faites un commit.
+
+4. Créez un dépot distant sur Github.
+
+5. Liez le dépôt distant et le dépôt local.
+
+6. Envoyez le code de votre dépôt local sur votre dépôt distant.
+
+7. Créez une branche "Services".
+
+8. Ajoutez-y une page services.html avec du contenu.
+
+9. Faites un commit de ces changements.
+
+10. Envoyez cette branche sur Github.
+
+11. Intégrez les changements de cette branche à la branche principale à l'aide d'une "pull request".

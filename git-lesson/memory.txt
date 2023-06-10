@@ -1,0 +1,160 @@
+/*
+    ---------------------
+        CONFIGURATION 
+    ---------------------
+*/
+
+
+// Affiche la version de Git installée sur votre système.
+git -v
+
+// L'option --global configure Git de manière globale pour l'utilisateur. 
+// Sans cette option, les paramètres s'appliquent uniquement au projet en cours.
+
+git config --global user.name "John doe"
+git config --global user.email "johndoe@gmail.com"
+
+git config --global color.ui true
+
+// Ouvre le fichier de configuration global de Git dans l'éditeur de texte configuré par défaut.
+git config --global --edit
+
+// Choisir l'editeur de texte par defaut
+git config --global core.editor 'code --wait'
+
+/*
+    ---------------------
+        Initialisation 
+    ---------------------
+*/
+
+
+// Crée un nouveau dépôt Git dans le répertoire actuel.
+git init
+
+// Affiche l'état de suivi des fichiers du répertoire de travail. 
+// Il montre les fichiers modifiés, les fichiers non suivis et les fichiers ajoutés à la staging area.
+git status
+
+/*
+    ---------------------
+        Commit 
+    ---------------------
+*/
+
+
+// Ajoute un fichier spécifique ou tous les fichiers modifiés à la staging area pour préparer un commit.
+git add [fichier]
+git add .
+
+// Enregistre les modifications présentes dans la staging area en créant un nouveau commit avec le message spécifié.
+git commit -m "message"
+
+// Affiche l'historique des commits, montrant les détails de chaque commit 
+// ou seulement les informations résumées en une ligne par commit.
+git log
+git log --oneline
+
+// Permet de se déplacer vers un commit spécifique en utilisant son identifiant.
+git checkout [id commit]
+
+// Permet de revenir au dernier commit (HEAD)
+git checkout [nom de la branche]
+
+/*
+    ---------------------
+        Branch 
+    ---------------------
+*/
+
+
+// Affiche la liste des branches présentes dans le dépôt.
+git branch
+
+// Crée une nouvelle branche à partir de la branche actuelle.
+git branch [nom de la branche]
+
+// Change de branche et se place sur la branche spécifiée.
+git switch [nom de la branche]
+
+// Fusionne les modifications de la branche spécifiée avec la branche actuelle.
+git merge [nom de la branche]
+
+// Renomme la branche actuelle avec le nouveau nom spécifié.
+git branch -m [nouveau nom]
+
+// Supprime la branche spécifiée.
+git branch -d [nom de la branche]
+
+/*
+    ---------------------
+        Restore 
+    ---------------------
+*/
+
+
+// Restaure un fichier à l'état de son dernier commit
+git restore [nom du fichier]
+
+// Supprime le fichier spécifié de la staging area, le retirant de la préparation pour le commit.
+git restore --staged [nom du fichier]
+
+// Crée un nouveau commit qui annule les modifications apportées par le commit spécifié.
+git revert [id du commit]
+
+/*
+    ---------------------
+        Remote 
+    ---------------------
+*/
+
+
+// Clone un dépôt Git distant en créant une copie locale du projet.
+git clone [url]
+
+----------------------------------------------
+
+// Établit une connexion avec un dépôt distant en lui attribuant un nom et une URL.
+git remote add [name] [url]
+
+// Envoie le contenu du dépôt local vers le dépôt distant 
+// En liant les branches locales avec les branches correspondantes du dépôt distant.
+git push -u origin main
+
+// Envoie le contenu du dépôt local vers le dépôt distant.
+git push
+
+// Récupère les modifications de la branche spécifiée du dépôt distant et les fusionne avec la branche locale.
+git pull [nom de l'url] [nom de la branche]
+
+// Exemple : Récupère les modifications de la branche "dev" du dépôt distant "origin" et les fusionne avec la branche locale.
+git pull origin dev
+
+// Récupère les modifications de la branche actuelle du dépôt distant associé et les fusionne avec la branche locale.
+git pull
+
+/*
+    ---------------------
+        .gitignore 
+    ---------------------
+*/
+
+
+// Permet de créer un fichier .gitignore dans lequel vous pouvez spécifier les fichiers et les motifs de fichiers à ignorer lors du suivi par Git.
+.gitignore
+
+/*
+    ---------------------
+        tag 
+    ---------------------
+*/
+
+
+// Affiche la liste des tags (étiquettes) présents dans le dépôt.
+git tag
+
+// Crée un nouveau tag avec le nom spécifié pour le commit spécifié.
+git tag [nom du tag] [id du commit]
+
+// Affiche les détails du commit associé au tag spécifié.
+git show [nom du tag]
